@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "0cbb0235-41ee-430f-a4ec-7e47a329a9d9",
+		"name": "Финальная аттестация",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35185093"
+	},
+	"item": [
+		{
+			"name": "Добавление товара в корзину",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"idCookie\":448832,\"idProd\":\"204\",\"type\":\"add\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL12}}ajax/basketOrder.php",
+					"host": [
+						"{{Base_URL12}}ajax"
+					],
+					"path": [
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение количества товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"idCookie\":\"698683\",\"idProd\":204,\"type\":\"plus\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL12}}ajax/basketOrder.php",
+					"host": [
+						"{{Base_URL12}}ajax"
+					],
+					"path": [
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление  товара из корзины",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"idCookie\":\"448832\",\"idProd\":204,\"type\":\"delete\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL12}}ajax/basketOrder.php",
+					"host": [
+						"{{Base_URL12}}ajax"
+					],
+					"path": [
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Base_URL12",
+			"value": "https://www.sibdar-spb.ru/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "BEIxjUTGIgE5B1NfmJJ4sRFxq_nd-Rm-LT4xv8jf7RXlEgIpTTvnP3SKbO1F7M9w2dkcHq1Gmc_IFjTV5Xr6FYGXR5tUOmERUSlSpOWFGZKFov2zXEolnQUSrjmMvkrmLQPBSEjAvti9xU1GzQYlo1xKJZ0FEq45jQfzx5SyePHReQf5Bc0N3u0OJTt8QiUFJRquoa0P81-0unhp8XEHYSXFDUbNBiWjXEolnQUSrjmNB_PHlLJ48dF5B_kFzQ3e7Q4lDsXznLy8oxeAFL5Ku5iyePHReQf5Bc0N3u0OJTt8QiUFJRquoa0P81-0unhp8XEHYSXFDUbNBiWjXEolnQUS64AUvkrmLQPBSEjB33ElxQwvP",
+			"type": "string"
+		}
+	]
+}
